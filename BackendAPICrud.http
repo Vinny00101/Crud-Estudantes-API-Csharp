@@ -1,0 +1,6 @@
+@BackendAPICrud_HostAddress = http://localhost:5255
+
+GET {{BackendAPICrud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
