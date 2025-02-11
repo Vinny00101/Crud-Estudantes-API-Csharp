@@ -5,8 +5,17 @@
 
 <h2 align="center">Requisitos</h2>
 <ul>
-    <li>.NET Core 3.1 ou superior</li>
-    <li>Visual Studio 2019 ou superior / VS Code</li>
+    <li>.NET Core mais atual</li>
+    <li>Visual Studio / VS Code</li>
     <li>Postman ou outro cliente HTTP para testar a API</li>
-    <li>Banco de dados SQL Server ou MySQL</li>
+    <li>Banco de dados MySQL</li>
+</ul>
+<h2 align="center">Configuração</h2>
+<ul>
+    <li>Primeiro Clone o repositorio na bash</li>
+    ```git
+    git clone https://github.com/Vinny00101/Crud-Estudantes-API-Csharp.git
+    <li>Apos ter os requisitos e feito o Clone, no terminal aplique esse comando Dotnet</li>
+    ```Csharp
+    dotnet restore
 </ul>
