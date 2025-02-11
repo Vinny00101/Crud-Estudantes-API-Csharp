@@ -13,9 +13,7 @@
 <h2 align="center">Configuração</h2>
 <ul>
     <li>Primeiro Clone o repositorio na bash</li>
-    ```git
-    git clone https://github.com/Vinny00101/Crud-Estudantes-API-Csharp.git
+    <div align="flex-start"><h4>git clone https://github.com/Vinny00101/Crud-Estudantes-API-Csharp.git</h4></div>
     <li>Apos ter os requisitos e feito o Clone, no terminal aplique esse comando Dotnet</li>
-    ```Csharp
-    dotnet restore
+    <div align="flex-start"><h4>dotnet restore</h4></div>
 </ul>
