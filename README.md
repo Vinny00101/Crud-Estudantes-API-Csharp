@@ -1,5 +1,7 @@
 <h1 align="center">Documentação da API de Sistema de Estudantes</h1>
 
+<p align="center">Este projeto foi desenvolvido para fins de estudo e prática de WebAPI em C#.</p>
+
 ## Introdução 
 
 <p>Esta documentação fornece informações sobre como usar a API para gerenciar dados de estudantes. A API permite realizar operações CRUD (Criar, Ler, Atualizar, Excluir) nos dados dos estudantes.</p>
@@ -35,10 +37,15 @@ Primeiro, faça a criação de um banco de dados no MySQL. Após criar o banco d
 
 ```
 
-Depois de fazer isso, você deve criar um arquivo .env e nomear a variável como `stringConection` para que o arquivo `Program.cs` possa ler a conexão com o `MySQL`. A baixo o exemplo:
+Depois de fazer isso, você deve criar um arquivo `.env` e nomear a variável como `stringConection` para que o arquivo `Program.cs` possa ler a conexão com o `MySQL`. O arquivo `.env` deve incluir as seguintes variáveis para a configuração do gerador de token JWT: `Key`, `Issuer`, `Audience`, `ExpiresInMinutes`. Importante: a chave (`Key`) deve ter pelo menos 32 bytes. A baixo o exemplo:
 
 ```
     stringConection="server=LocalHost;port=3000;user=user;password=senha0120;database=dataBase;"
+
+    Key="SuperSecureKeyForJWTAuthentication1234"
+    Issuer="SeuEmissor"
+    Audience="SeuPublico"
+    ExpiresInMinutes=60
 
 ```
 

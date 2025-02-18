@@ -24,21 +24,15 @@ public class securityCript
         var User = context.Registros
             .Where(user => user.Username == username)
             .Select(user => new {user.id, user.Username, user.Password})
-            .FirstOrDefault();
-        if (!(User == null))
-        {
-            string? passwordCript = User.Password;
-            var Usuario = new Usuario(User.id, username);
+            .FirstOrDefault()!;
+        
+        string passwordCript = User.Password!;
+        var Usuario = new Usuario(User.id, username);
+        var VerificaPassword = Hasher.VerifyHashedPassword(Usuario, passwordCript, password);
 
-            if (!(passwordCript == null))
-            {
-                var VerificaPassword = Hasher.VerifyHashedPassword(Usuario, passwordCript, password);
-                if (VerificaPassword == PasswordVerificationResult.Success)
-                {
-                    return true;
-                }
-                return false;
-            }
+        if (VerificaPassword == PasswordVerificationResult.Success)
+        {
+            return true;
         }
         return false;
     }
